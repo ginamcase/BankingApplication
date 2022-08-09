@@ -1,7 +1,8 @@
-.nav {
-
+.navbar-dark {
+    background-color:rgb(33, 32, 32);
 }
 
-.navflex {
-
+.nav-item--selected {
+    background: rgb(67, 66, 66);
+    color: #FFF;
 }
