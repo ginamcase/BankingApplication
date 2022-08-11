@@ -1,8 +1,8 @@
 function CreateAccount(){
-    const [show, setShow]         = React.useState(true);
-    const [status, setStatus]     = React.useState('');
-    const [name, setName]         = React.useState('');
-    const [email, setEmail]       = React.useState('');
+    const [show, setShow] = React.useState(true);
+    const [status, setStatus] = React.useState('');
+    const [name, setName] = React.useState('');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const context = React.useContext(UserContext);  
   
@@ -42,7 +42,7 @@ function CreateAccount(){
       if (!validate(name, 'name'))     return;
       if (!validate(email, 'email'))    return;
       if (!validate(password, 'password')) return;
-      context.users.push({name, email, password, balance:100});
+      context.users.push({name, email, password, balance:50});
       setShow(false);
     }    
   
@@ -66,8 +66,8 @@ function CreateAccount(){
             Email address: <br/>
             <input type="input" className="form-control" id="email" placeholder="ex: bruce@batman.com" value={email} onChange={e => setEmail(e.currentTarget.value)}/> <br/>
             Password: <br/>
-            <input type="password" className="form-control" id="password" placeholder="enter password here" value={password} onChange={e => setPassword(e.currentTarget.value)}/> <br/>
-            <button type="submit" disabled={ (name && email && password) ?false:true} className="btn btn-dark" onClick={handleCreate}>Submit</button>
+            <input type="password" className="form-control" id="password" placeholder="password" value={password} onChange={e => setPassword(e.currentTarget.value)}/> <br/>
+            <button type="submit" disabled={ (name && email && password) ?false:true} className="btn btn-dark" onClick={handleCreate}>Submit!</button>
             </>
             ):(
             <>
