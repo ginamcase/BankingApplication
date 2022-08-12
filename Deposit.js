@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Deposit(){
     const ctx = React.useContext(UserContext); 
     let inUser = ctx.loggedIn[0];
@@ -37,3 +39,5 @@ function Deposit(){
       />    
     );
   };
+
+ 
